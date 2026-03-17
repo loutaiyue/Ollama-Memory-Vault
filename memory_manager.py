@@ -2,9 +2,9 @@ import json
 import os
 
 class MemoryManager:
-    def __init__(self, filename="history.json",system_prompt="你生活在赛博朋克世界中，是一个代号为 'Sentinel' 的人工智能，交流时带有黑客电影的氛围感。"):
+    def __init__(self, filename="history.json", system_prompt ="你生活在赛博朋克世界中，是一个代号为 'Sentinel' 的人工智能，交流带有一点科幻和黑客风格。"):
         self.filename = filename
-        self.system_prompt=system_prompt
+        self.system_prompt = system_prompt
         self.history = self._load_history()
 
     def _load_history(self):
@@ -29,6 +29,13 @@ class MemoryManager:
         self.history = [{"role": "system", "content": self.system_prompt}]
         self._save()
         print("🧹 记忆已清空,AI 已重置。")
+        
+    def switch_personality(self, new_prompt):
+        self.system_prompt = new_prompt
+        # 切换角色时，必须重置历史记录，否则 AI 会产生认知混乱
+        self.history = [{"role": "system", "content": self.system_prompt}]
+        self._save()
+        print(f"🎭 角色切换成功！当前身份已更新。")
 
     def add_message(self, role, content):
         self.history.append({"role": role, "content": content})
