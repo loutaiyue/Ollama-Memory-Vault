@@ -33,8 +33,14 @@ During the chat, you can use the following commands:
 - `/clear`: Reset memory and start over. (重置记忆，重新开始)
 - `/status`: View current memory status. (查看当前记忆状态)
 - `/exit`: Safe exit. (安全退出)
+
 ### 🎭 Role Switching /切换角色
 Type /switch [role_name] to change AI personality:
 /switch sentinel (Default)
 /switch teacher (English learning)
 /switch hacker (Security expert)
+
+### 🌐 Web Interface
+We now support a beautiful web UI! Run it with:
+streamlit run app.py
+![alt text](image.png)
