@@ -27,3 +27,9 @@ git clone [https://github.com/zengniu222/Ollama-Memory-Vault.git]
 cd Ollama-Memory-Vault
 pip install -r requirements.txt
 
+### 🛠️ Developer Commands / 开发者指令
+During the chat, you can use the following commands:
+在对话过程中，你可以使用以下指令：
+- `/clear`: Reset memory and start over. (重置记忆，重新开始)
+- `/status`: View current memory status. (查看当前记忆状态)
+- `/exit`: Safe exit. (安全退出)

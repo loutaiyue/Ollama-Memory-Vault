@@ -23,6 +23,12 @@ class MemoryManager:
                 history.insert(0, new_system_msg)
                 
         return history
+    
+    def clear_history(self):
+        # 恢复到只有系统提示词的初始状态
+        self.history = [{"role": "system", "content": self.system_prompt}]
+        self._save()
+        print("🧹 记忆已清空,AI 已重置。")
 
     def add_message(self, role, content):
         self.history.append({"role": role, "content": content})
