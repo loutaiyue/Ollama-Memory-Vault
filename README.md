@@ -23,7 +23,7 @@ A lightweight Python tool to provide **persistent memory** and **custom personal
 Clone this repository and install dependencies:  
 克隆仓库并安装依赖：
 ```bash
-git clone [https://github.com/zengniu222/Ollama-Memory-Vault.git]
+git clone [https://github.com/loutaiyue/Ollama-Memory-Vault.git]
 cd Ollama-Memory-Vault
 pip install -r requirements.txt
 
